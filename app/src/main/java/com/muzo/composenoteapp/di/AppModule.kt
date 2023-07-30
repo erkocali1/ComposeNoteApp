@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.muzo.composenoteapp.feature_note.data.data_source.NoteDatabase
 import com.muzo.composenoteapp.feature_note.data.repository.NoteRepositoryImpl
 import com.muzo.composenoteapp.feature_note.domain.repository.NoteRepository
+import com.muzo.composenoteapp.feature_note.domain.use_case.AddNoteUseCases
 import com.muzo.composenoteapp.feature_note.domain.use_case.DeleteNoteUseCase
 import com.muzo.composenoteapp.feature_note.domain.use_case.GetNotesUseCase
 import com.muzo.composenoteapp.feature_note.domain.use_case.NotesUseCases
@@ -36,7 +37,8 @@ object AppModule {
     fun provideNoteUseCases(repository:NoteRepository):NotesUseCases{
         return  NotesUseCases(
             getNotesUseCase = GetNotesUseCase(repository),
-            deleteNoteUseCase = DeleteNoteUseCase(repository)
+            deleteNoteUseCase = DeleteNoteUseCase(repository),
+            addNoteUseCase = AddNoteUseCases(repository)
         )
     }
 }

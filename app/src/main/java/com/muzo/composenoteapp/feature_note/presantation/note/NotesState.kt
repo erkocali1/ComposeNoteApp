@@ -1,4 +1,4 @@
-package com.muzo.composenoteapp.feature_note.presantation.note.components
+package com.muzo.composenoteapp.feature_note.presantation.note
 
 import com.muzo.composenoteapp.feature_note.domain.model.Note
 import com.muzo.composenoteapp.feature_note.domain.util.NoteOrder

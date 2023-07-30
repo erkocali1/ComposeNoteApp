@@ -8,6 +8,7 @@ import com.muzo.composenoteapp.ui.theme.LightGreen
 import com.muzo.composenoteapp.ui.theme.RedOrange
 import com.muzo.composenoteapp.ui.theme.RedPink
 import com.muzo.composenoteapp.ui.theme.Violet
+import java.lang.Exception
 import java.sql.Timestamp
 
 @Entity
@@ -21,3 +22,5 @@ data class Note(
     companion object
     val noteColors= listOf(RedOrange, LightGreen, Violet, BabyBlue, RedPink)
 }
+
+class InvalidNoteException(message:String):Exception(message)
