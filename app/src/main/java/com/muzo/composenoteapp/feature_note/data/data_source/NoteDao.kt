@@ -9,7 +9,7 @@ import com.muzo.composenoteapp.feature_note.domain.model.Note
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface NotDao {
+interface NoteDao {
 
     @Query("SELECT*FROM  note")
     fun getNotes(): Flow<List<Note>>

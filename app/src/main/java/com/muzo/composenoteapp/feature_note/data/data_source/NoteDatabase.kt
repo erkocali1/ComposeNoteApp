@@ -11,5 +11,9 @@ import com.muzo.composenoteapp.feature_note.domain.model.Note
 )
 abstract class NoteDatabase : RoomDatabase() {
 
-    abstract fun getNoteDao():NotDao
+    abstract fun noteDao():NoteDao
+
+    companion object{
+        const val DATABASE_NAME="note_db"
+    }
 }
