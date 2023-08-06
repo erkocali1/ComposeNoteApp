@@ -7,6 +7,7 @@ import com.muzo.composenoteapp.feature_note.data.repository.NoteRepositoryImpl
 import com.muzo.composenoteapp.feature_note.domain.repository.NoteRepository
 import com.muzo.composenoteapp.feature_note.domain.use_case.AddNoteUseCases
 import com.muzo.composenoteapp.feature_note.domain.use_case.DeleteNoteUseCase
+import com.muzo.composenoteapp.feature_note.domain.use_case.GetNoteUseCases
 import com.muzo.composenoteapp.feature_note.domain.use_case.GetNotesUseCase
 import com.muzo.composenoteapp.feature_note.domain.use_case.NotesUseCases
 import dagger.Module
@@ -38,7 +39,8 @@ object AppModule {
         return  NotesUseCases(
             getNotesUseCase = GetNotesUseCase(repository),
             deleteNoteUseCase = DeleteNoteUseCase(repository),
-            addNoteUseCase = AddNoteUseCases(repository)
+            addNoteUseCase = AddNoteUseCases(repository),
+            getNoteUseCase = GetNoteUseCases(repository)
         )
     }
 }
